@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telemedicine App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Telemedicine</div>
+      <ul>
+        <li><a href="#" onclick="showSection('appointments')">Appointments</a></li>
+        <li><a href="#" onclick="showSection('consultations')">Video Consultations</a></li>
+        <li><a href="#" onclick="showSection('records')">Medical Records</a></li>
+        <li><a href="#" onclick="showSection('messages')">Messages</a></li>
+        <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="appointments" class="section active">
+        <h2>Appointments</h2>
+        <div id="appointments-container">
+          </div>
+        <button id="book-appointment-btn">Book Appointment</button> 
+      </section>
+
+      <section id="consultations" class="section">
+        <h2>Video Consultations</h2>
+        <div id="consultations-container"></div>
+        </section>
+
+      <section id="records" class="section">
+        <h2>Medical Records</h2>
+        <div id="records-container"></div>
+        <input type="file" id="upload-record-input" style="display: none;">
+        <button id="upload-record-btn">Upload Record</button>
+      </section>
+
+      <section id="messages" class="section"> 
+        <h2>Messages</h2>
+        <div id="messages-container">
+          </div> 
+        <textarea id="message-input" placeholder="Type your message..."></textarea> 
+        <button id="send-message-btn">Send</button> 
+      </section>
+
+      <section id="profile" class="section"> 
+        <h2>Profile</h2>
+        <div id="profile-info">
+          </div> 
+        <button id="edit-profile-btn">Edit Profile</button> 
+        <button id="logout-btn">Logout</button> 
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
